@@ -20,7 +20,6 @@ class DescScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // نقلنا الـ TitleWidget هنا ليعمل بشكل صحيح داخل الـ body
             TitleWidget(title: planet!.name, description: planet.title),
             AspectRatio(
               aspectRatio: 1,
@@ -39,13 +38,13 @@ class DescScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start, // التصحيح هنا
                 children: [
-                  Text('About', style: theme.textTheme.bodyLarge),
+                  Text('About', style: theme.textTheme.titleLarge),
                   const SizedBox(height: 8),
                   Text(planet.about, style: theme.textTheme.bodyLarge),
                   const SizedBox(height: 8),
                   Text(
                     "Distance from Sun (km) : ${planet.distanceFromSun}",
-                    style: theme.textTheme.bodyLarge,
+                    style: theme.textTheme.titleLarge,
                   ),
                   Text(planet.lengthOfDay, style: theme.textTheme.bodyLarge),
                   Text(
